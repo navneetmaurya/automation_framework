@@ -1,0 +1,9 @@
+*.pid
+*.log
+pkg
+doc
+.yardoc
+.idea
+.bundle
+reports
+Gemfile.lock
