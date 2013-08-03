@@ -18,7 +18,7 @@ module AutomationFramework
       profile.add_extension(File.dirname(__FILE__) + '/extensions/firebug-1.10.2.xpi')
       profile['extensions.firebug.currentVersion'] = '1.10.2' #Load without start page
       profile.native_events = uses_native_events
-
+      profile
     end
 
     def self.chrome_profile
@@ -35,5 +35,5 @@ module AutomationFramework
       profile.add_extension(File.dirname(__FILE__) + '/extensions/AdBlock_v2.5.61.crx')
       profile
     end
-  end
-end
+  end#BrowserProfiles
+end#AutomationFramework

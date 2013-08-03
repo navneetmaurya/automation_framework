@@ -23,5 +23,7 @@ require 'automation_framework/rspec_config/rspec_config'
 require 'automation_framework/rspec_config/cucumber_config'
 
 require 'automation_framework/web_driver/create_driver'
+require 'automation_framework/web_driver/launch_browser'
 
 include AutomationFramework::CreateDriver
+include AutomationFramework::CreateDriver::LaunchBrowser

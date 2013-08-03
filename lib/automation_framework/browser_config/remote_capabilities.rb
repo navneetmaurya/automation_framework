@@ -24,6 +24,5 @@ module AutomationFramework
     def self.firefox_cap
       Selenium::WebDriver::Remote::Capabilities.firefox(:firefox_profile => BrowserProfiles.firefox_profile)
     end
-
-  end
-end
+  end #RemoteCapabilities
+end #AutomtaionFramework

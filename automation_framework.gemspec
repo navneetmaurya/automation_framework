@@ -8,12 +8,12 @@ Gem::Specification.new do |spec|
   spec.version       = AutomationFramework::VERSION
   spec.authors       = ['Navneet Maurya']
   spec.email         = ['navneetm@live.com']
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ''
+  spec.description   = 'Write a gem description'
+  spec.summary       = 'Write a gem summary'
+  spec.homepage      = 'http://gihub.com/navneetmaurya/automation_framework'
   spec.license       = 'MIT'
 
-  spec.files         = `git ls-files`.split($/)
+  spec.files         = `git ls-files`.split($\)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
@@ -27,13 +27,14 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'rest-client'
   spec.add_dependency 'symboltable'
   spec.add_dependency 'selenium-webdriver'
+  spec.add_dependency 'rack', '1.5.0'
 
   #needed for other libraries
   spec.add_dependency 'rally_rest_api'
   spec.add_dependency 'json', '~> 1.7.7'
 
   # Testing
-  spec.add_dependency 'selenium_fury', '~> 1.0.1'
+  spec.add_dependency 'selenium_fury', '~> 1.0.x'
   spec.add_dependency 'rspec-extra-formatters', '~> 1.0.0'
   spec.add_dependency 'cucumber', '~> 1.2'
   spec.add_dependency 'faker' # Random Data Generation

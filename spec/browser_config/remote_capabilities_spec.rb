@@ -1,4 +1,4 @@
-require '../spec_helper'
+require 'spec_helper'
 
 describe RemoteCapabilities do
   context 'has Selenium::WebDriver::Remote::Capabilities' do

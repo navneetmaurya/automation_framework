@@ -2,7 +2,7 @@ module AutomationFramework
   class ResponseValidator
     class ResponseValidatorError < StandardError; end
 
-    def check_url?(args)
+    def self.check_url?(args)
       url=''
       url=nil if (args.length==0)
       url=args[0] if (args.length==1)
@@ -14,12 +14,12 @@ module AutomationFramework
       end
     end
 
-    def check_response?(url)
-
+    def self.check_response?(url)
+      true
     end
 
-    def check_service?(url)
-
+    def self.check_service?(url)
+      true
     end
-  end
-end
+  end #ResponseValidator
+end #AutomationFramework

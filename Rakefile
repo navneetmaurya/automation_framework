@@ -1,3 +1,6 @@
+require 'rubygems'
+require 'bundler/setup'
+require 'uri/http'
 require "bundler/gem_tasks"
 require 'colorize'
 require 'awesome_print'

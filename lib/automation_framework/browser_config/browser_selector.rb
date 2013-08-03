@@ -1,5 +1,15 @@
 module AutomationFramework
-  class BrowserSelector
+  module CreateDriver
+    class BrowserSelector
+      class BrowserSelectorError < StandardError; end
 
-  end
-end
+      def browser
+        if CONFIG.browser.nil?
+          raise(BrowserSelectorError, 'Please define browser in CONFIG table')
+        else
+          CONFIG.browser
+        end
+      end
+    end #BrowserSelector
+  end #CreateDriver
+end #AutomationFramework

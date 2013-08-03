@@ -6,6 +6,7 @@ module AutomationFramework
       def launch_browser(*args)
         url = create_uri(*args)
         validated_url = validate_and_return_url(url)
+        driver = create_driver
         driver.navigate.to(validated_url)
       end
 
@@ -25,12 +26,12 @@ module AutomationFramework
       end
 
       def validate_and_return_url(url)
-        if check_url?(url) && check_response?(url) && check_service?(url)
+        if ResponseValidator.check_url?(url) && ResponseValidator.check_response?(url) && ResponseValidator.check_service?(url)
           url
         else
           raise(LaunchBrowserError, 'Unable to create url from the provided information')
         end
       end
-    end
-  end
-end
+    end #LaunchBrowser
+  end #CreateDriver
+end #AutomationFramework

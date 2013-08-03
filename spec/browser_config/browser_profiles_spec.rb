@@ -1,7 +1,7 @@
-require '../spec_helper'
+require 'spec_helper'
 
 describe BrowserProfiles do
-  it 'has a ad block BrowserProfiles::Chrome' do
+  it "has a ad block BrowserProfiles::Chrome" do
     chrome=BrowserProfiles.chrome_with_ad_block_profile
     chrome.should be_a(Selenium::WebDriver::Chrome::Profile)
     chrome.instance_variable_get(:@extensions)[0].should include("AdBlock_v2.5.61.crx")
@@ -10,7 +10,7 @@ describe BrowserProfiles do
     chrome.instance_variable_get(:@prefs)['download']['default_directory'].should == "/tmp_downloads"
   end
 
-  it 'has a BrowserProfiles::Chrome' do
+  it "has a BrowserProfiles::Chrome" do
     chrome=BrowserProfiles.chrome_profile
     chrome.should be_a(Selenium::WebDriver::Chrome::Profile)
     chrome.instance_variable_get(:@prefs)['download'].should be_a(Hash)
@@ -18,7 +18,7 @@ describe BrowserProfiles do
     chrome.instance_variable_get(:@prefs)['download']['default_directory'].should == "/tmp_downloads"
   end
 
-  it 'has a BrowserProfiles::Firefox' do
+  it "has a BrowserProfiles::Firefox" do
     firefox=BrowserProfiles.firefox_profile(false)
     firefox.should be_a(Selenium::WebDriver::Firefox::Profile)
     firefox.native_events?.should be_false
