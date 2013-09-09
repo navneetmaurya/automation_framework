@@ -16,7 +16,7 @@ require 'automation_framework/error_handler/response_validator'
 
 require 'automation_framework/grid_config/grid_settings'
 
-require 'automation_framework/rake/rspec'
+require 'automation_framework/rake/configuration.rake'
 require 'automation_framework/rake/cucumber'
 
 require 'automation_framework/rspec_config/rspec_config'
